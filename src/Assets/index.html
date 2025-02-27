@@ -10,41 +10,32 @@
     <link href="https://cdn.jsdelivr.net/npm/quill/dist/quill.snow.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .skill-card {
-            margin-top: 200px;
-            margin-left: 200px;
-            background: #f8f9fa;
-            padding: 10px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            transition: 0.3s;
+    <!-- <style>
+        @media (max-width: 320px) {
+            .search-container {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .search-container input {
+                width: 100%;
+                margin-bottom: 10px;
+              
+            }
+    
+            .search-container .btn-container {
+                flex-direction: column;
+                width: 150%;
+                
+            }
+    
+            .search-container .btn-container button {
+                width: 150%;
+                margin-bottom: 5px;
+            }
         }
-
-        .skill-card:hover {
-            background: #e2e6ea;
-        }
-
-        .skill-actions {
-            display: flex;
-            gap: 10px;
-        }
-
-        .icon-btn {
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            font-size: 1.2rem;
-            color:blueviolet;
-        }
-
-        .icon-btn:hover {
-            background-color: blue;
-            color: blueviolet;
-        }
-    </style>
+    </style> -->
+       
 
 </head>
 
@@ -160,17 +151,17 @@
                 </div>
                 <div class="accordion-collapse " id="Menu">
                     <ul class="list ms-3">
-                        <li class="d-flex align-items-center nav-link text-primary px-1 py-2">
-                            <img src="icons/Leraning.svg" alt="Dashboard Icon" class="img  mb-2" width="20"
+                        <li class="d-flex align-items-center  px-1 py-2">
+                            <img src="icons/learning.png" alt="Dashboard Icon" class="img  mb-2" width="20"
                                 height="20">
-                            <span class="ms-2">Learning Path</span>
+                            <span class="ms-1">Learning Path</span>
                         </li>
                         <li class="d-flex align-items-center">
                             <img src="icons/courses.svg" alt="Dashboard Icon" class="img  mb-2" width="20"
                                 height="20">
                             <span class="ms-2"> Courses</span>
                         </li>
-                        <li class="d-flex align-items-center">
+                        <li class="d-flex align-items-center nav-link text-primary">
                             <img src="icons/SkillSet.svg" alt="Dashboard Icon" class="img  mb-2" width="20"
                                 height="20">
                             <span class="ms-2"> Skill Sets</span>
@@ -187,20 +178,23 @@
         <div class="container mt-4">
             <div class="card p-3 ">
                 <!-- Card Header -->
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <input type="text" class="form-control w-50" placeholder="Search Skills">
-                    <div>
-                        <button class="btn btn-outline-danger me-2">Delete</button>
-                        <button class="btn btn-primary">Create New Skills</button>
+                <div class="d-flex flex-wrap flex-md-nowrap justify-content-end align-items-md-center mb-3  search-container">
+                    <input type="text" class="form-control flex-grow-1 me-md-2 w-25 mb-2 mb-md-0" placeholder="Search Skills" style="min-width: 200px;">
+                    <div class=" btn-container  gap-3">
+                        <button class="btn btn-outline-primary me-2 ">
+                            <i class="bi bi-trash3 me-2"></i>Delete
+                        </button>
+                        <button class="btn btn-primary">
+                            <i class="bi bi-plus-lg me-1"></i> Create New Skills
+                        </button>
                     </div>
                 </div>
-
                 <!-- Profile & Form -->
                 <div class="row">
-                    <div class=" p-3  mt-3 ms-0">
+                    <div class=" p-3  mt-2 ms-0 ">
                         <div id="skills-list">
-                            <div class="row align-items-center mb-2">
-                                <div class="col-sm-12 col-md-12 col-lg-3  ">
+                            <div class="row align-items-center mb-2 g-2">
+                                <div class="col-sm-6 col-md-12 col-lg-3  ">
                                     <div class="d-flex border border-radius-10 p-2">
                                         <input type="checkbox" class=" me-3">
                                         <img src="icons/Git.svg" alt="Mentor" class=" me-3 " width="30" height="30">
@@ -212,7 +206,7 @@
                                         
                                     </div>
                                 </div>
-                                <div class="col-sm-12 col-md-12 col-lg-3">
+                                <div class="col-sm-6 col-md-12 col-lg-3">
                                     <div class="d-flex border border-radius-10 p-2">
                                         <input type="checkbox" class=" me-3">
                                         <img src="icons/ASP.png" alt="Mentor" class=" me-3"
@@ -225,7 +219,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-12 col-md-12 col-lg-3">
+                                <div class="col-sm-6 col-md-12 col-lg-3">
                                     <div class="d-flex border border-radius-10 p-2"">
                                         <input type="checkbox" class=" me-3">
                                         <img src="icons/C.png" alt="Mentor" class=" me-3"
@@ -237,7 +231,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-12 col-md-12 col-lg-3">
+                                <div class="col-sm-6 col-md-12 col-lg-3">
                                     <div class="d-flex border border-radius-10 p-2"">
                                         <input type="checkbox" class=" me-3">
                                         <img src="icons/JavaScript.svg" alt="Mentor" class=" me-3 "
@@ -253,13 +247,13 @@
                         </div>
                     </div>
                 <div class="row">
-                    <div class=" p-3 rounded mt-3 ms-2">
+                    <div class=" p-3 rounded mt-2 ms-2">
                         <div id="skills-list">
                             <div class="row align-items-center mb-2">
                                 <div class="col-sm-12 col-md-12 col-lg-3  ">
                                     <div class="d-flex border border-radius-10 p-2">
                                         <input type="checkbox" class=" me-3">
-                                        <img src="Assets/icons/Alex.png" alt="Mentor" class="me-3"
+                                        <img src="icons/html.png" alt="Mentor" class="me-3"
                                             width="30" height="30">
                                             <div class="mt-1">HTML</div>
                                        <div class="trashicon col-1 ms-auto d-flex me-5">
@@ -308,7 +302,7 @@
                         </div>
                     </div>
                 <div class="row">
-                    <div class="border p-3 rounded mt-3 ms-2">
+                    <div class="p-3  mt-3 ms-2">
                         <div id="skills-list">
                             <div class="row align-items-center mb-2">
                                 <div class="col-sm-12 col-md-12 col-lg-3  ">
@@ -338,7 +332,19 @@
                                 <div class="col-sm-12 col-md-12 col-lg-3">
                                     <div class="d-flex border border-radius-10 p-2"">
                                         <input type="checkbox" class=" me-3">
-                                        <img src="icons/Angular.svg" Mentor" class=" me-3"
+                                        <img src="icons/Typescript.png" Mentor" class=" me-3"
+                                            width="30" height="30">
+                                            <div class="mt-1">Typescript</div>
+                                        <div class="trashicon col-1 ms-auto d-flex me-5">
+                                            <button class="btn btn-sm me-2"><i class="bi bi-trash3"></i></button>
+                                            <button class="btn  btn-sm"><i class="bi bi-pencil"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-12 col-lg-3">
+                                    <div class="d-flex border border-radius-10 p-2"">
+                                        <input type="checkbox" class=" me-3">
+                                        <img src="icons/Angular.svg" alt="Mentor" class="me-3"
                                             width="30" height="30">
                                             <div class="mt-1">Angular.js</div>
                                         <div class="trashicon col-1 ms-auto d-flex me-5">
@@ -347,12 +353,56 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="row">
+                    <div class=" p-3  mt-3 ms-2">
+                        <div id="skills-list">
+                            <div class="row align-items-center mb-2">
+                                <div class="col-sm-12 col-md-12 col-lg-3  ">
+                                    <div class="d-flex border border-radius-10 p-2">
+                                        <input type="checkbox" class=" me-3">
+                                        <img src="icons/NodeJs.png" alt="Mentor" class="me-3"
+                                            width="30" height="30">
+                                            <div class="mt-1">NodeJS</div>
+                                        <div class="trashicon col-1 ms-auto d-flex me-5">
+                                            <button class="btn btn-sm me-2"><i class="bi bi-trash3"></i></button>
+                                            <button class="btn  btn-sm"><i class="bi bi-pencil"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="col-sm-12 col-md-12 col-lg-3">
                                     <div class="d-flex border border-radius-10 p-2"">
                                         <input type="checkbox" class=" me-3">
-                                        <img src="Assets/icons/Alex.png" alt="Mentor" class="rounded-circle me-3"
-                                            width="20" height="20">
-                                         Vue.js
+                                        <img src="icons/machine.png" alt="Mentor" class="me-3 "
+                                            width="30" height="30">
+                                            <div class="mt-1">Machine Learning</div>
+                                        <div class="trashicon col-1 ms-auto d-flex me-5">
+                                            <button class="btn btn-sm me-2"><i class="bi bi-trash3"></i></button>
+                                            <button class="btn  btn-sm"><i class="bi bi-pencil"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-12 col-lg-3">
+                                    <div class="d-flex border border-radius-10 p-2"">
+                                        <input type="checkbox" class=" me-3">
+                                        <img src="icons/Artificial.png" alt="Mentor" class=" me-1"
+                                            width="30" height="30">
+                                            <div class="mt-1">Artificial Inteligence</div>
+                                        <div class="trashicon col-1 ms-auto d-flex me-5">
+                                            <button class="btn btn-sm me-2"><i class="bi bi-trash3"></i></button>
+                                            <button class="btn  btn-sm"><i class="bi bi-pencil"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-12 col-lg-3">
+                                    <div class="d-flex border border-radius-10 p-2"">
+                                        <input type="checkbox" class=" me-3">
+                                        <img src="icons/DeepLearning.svg" alt="Mentor" class="me-3"
+                                            width="30" height="30">
+                                            <div class="mt-1">Deep Learning</div>
                                         <div class="trashicon col-1 ms-auto d-flex me-5">
                                             <button class="btn btn-sm me-2"><i class="bi bi-trash3"></i></button>
                                             <button class="btn  btn-sm"><i class="bi bi-pencil"></i></button>
@@ -366,15 +416,15 @@
                         </div>
                     </div>
                 <div class="row">
-                    <div class="border p-3 rounded mt-3 ms-2">
+                    <div class=" p-3  mt-3 ms-2">
                         <div id="skills-list">
                             <div class="row align-items-center mb-2">
                                 <div class="col-sm-12 col-md-12 col-lg-3  ">
                                     <div class="d-flex border border-radius-10 p-2">
                                         <input type="checkbox" class=" me-3">
-                                        <img src="Assets/icons/Alex.png" alt="Mentor" class="rounded-circle me-3"
-                                            width="20" height="20">
-                                        David Lee
+                                        <img src="icons/DataAnalytics.png" alt="Mentor" class=" me-3"
+                                            width="30" height="30">
+                                            <div class="mt-1">Data Analytics</div>
                                         <div class="trashicon col-1 ms-auto d-flex me-5">
                                             <button class="btn btn-sm me-2"><i class="bi bi-trash3"></i></button>
                                             <button class="btn  btn-sm"><i class="bi bi-pencil"></i></button>
@@ -384,9 +434,9 @@
                                 <div class="col-sm-12 col-md-12 col-lg-3">
                                     <div class="d-flex border border-radius-10 p-2"">
                                         <input type="checkbox" class=" me-3">
-                                        <img src="Assets/icons/Alex.png" alt="Mentor" class="rounded-circle me-3"
-                                            width="20" height="20">
-                                        David Lee
+                                        <img src="icons/SQL.png" alt="Mentor" class=" me-3"
+                                            width="30" height="30">
+                                            <div class="mt-1">SQL</div>
                                         <div class="trashicon col-1 ms-auto d-flex me-5">
                                             <button class="btn btn-sm me-2"><i class="bi bi-trash3"></i></button>
                                             <button class="btn  btn-sm"><i class="bi bi-pencil"></i></button>
@@ -396,9 +446,9 @@
                                 <div class="col-sm-12 col-md-12 col-lg-3">
                                     <div class="d-flex border border-radius-10 p-2"">
                                         <input type="checkbox" class=" me-3">
-                                        <img src="Assets/icons/Alex.png" alt="Mentor" class="rounded-circle me-3"
-                                            width="20" height="20">
-                                        David Lee
+                                        <img src="icons/MySql.png" alt="Mentor" class=" me-3"
+                                            width="30" height="30">
+                                            <div class="mt-1">MySQL</div>
                                         <div class="trashicon col-1 ms-auto d-flex me-5">
                                             <button class="btn btn-sm me-2"><i class="bi bi-trash3"></i></button>
                                             <button class="btn  btn-sm"><i class="bi bi-pencil"></i></button>
@@ -408,9 +458,9 @@
                                 <div class="col-sm-12 col-md-12 col-lg-3">
                                     <div class="d-flex border border-radius-10 p-2"">
                                         <input type="checkbox" class=" me-3">
-                                        <img src="Assets/icons/Alex.png" alt="Mentor" class="rounded-circle me-3"
-                                            width="20" height="20">
-                                        David Lee
+                                        <img src="icons/DataBase (2).png" alt="Mentor" class=" me-3"
+                                            width="30" height="30">
+                                            <div class="mt-1">DataBase Managment</div>
                                         <div class="trashicon col-1 ms-auto d-flex me-5">
                                             <button class="btn btn-sm me-2"><i class="bi bi-trash3"></i></button>
                                             <button class="btn  btn-sm"><i class="bi bi-pencil"></i></button>
@@ -424,15 +474,15 @@
                         </div>
                     </div>
                 <div class="row">
-                    <div class="border p-3 rounded mt-3 ms-2">
+                    <div class=" p-3  mt-3 ms-2">
                         <div id="skills-list">
                             <div class="row align-items-center mb-2">
                                 <div class="col-sm-12 col-md-12 col-lg-3  ">
                                     <div class="d-flex border border-radius-10 p-2">
                                         <input type="checkbox" class=" me-3">
-                                        <img src="Assets/icons/Alex.png" alt="Mentor" class="rounded-circle me-3"
-                                            width="20" height="20">
-                                        Git
+                                        <img src="icons/MongoDB.svg" alt="Mentor" class=" me-3"
+                                            width="30" height="30">
+                                            <div class="mt-1">MongoDB</div>
                                         <div class="trashicon col-1 ms-auto d-flex me-5">
                                             <button class="btn btn-sm me-2"><i class="bi bi-trash3"></i></button>
                                             <button class="btn  btn-sm"><i class="bi bi-pencil"></i></button>
@@ -442,9 +492,9 @@
                                 <div class="col-sm-12 col-md-12 col-lg-3">
                                     <div class="d-flex border border-radius-10 p-2"">
                                         <input type="checkbox" class=" me-3">
-                                        <img src="Assets/icons/Alex.png" alt="Mentor" class="rounded-circle me-3"
-                                            width="20" height="20">
-                                     ASP.NET
+                                        <img src="icons/SQLServer.svg" Mentor" class=" me-3"
+                                            width="30" height="30">
+                                            <div class="mt-1">SQLServer</div>
                                         <div class="trashicon col-1 ms-auto d-flex me-5">
                                             <button class="btn btn-sm me-2"><i class="bi bi-trash3"></i></button>
                                             <button class="btn  btn-sm"><i class="bi bi-pencil"></i></button>
@@ -454,9 +504,9 @@
                                 <div class="col-sm-12 col-md-12 col-lg-3">
                                     <div class="d-flex border border-radius-10 p-2"">
                                         <input type="checkbox" class=" me-3">
-                                        <img src="Assets/icons/Alex.png" alt="Mentor" class="rounded-circle me-3"
-                                            width="20" height="20">
-                                       <div class="mt-1">Git</div>
+                                        <img src="icons/ApacheKafka.svg" alt="Mentor" class=" me-3"
+                                            width="30" height="30">
+                                            <div class="mt-1">ApacheKafka</div>
                                         <div class="trashicon col-1 ms-auto d-flex me-5">
                                             <button class="btn btn-sm me-2"><i class="bi bi-trash3"></i></button>
                                             <button class="btn  btn-sm"><i class="bi bi-pencil"></i></button>
@@ -466,9 +516,9 @@
                                 <div class="col-sm-12 col-md-12 col-lg-3">
                                     <div class="d-flex border border-radius-10 p-2"">
                                         <input type="checkbox" class=" me-3">
-                                        <img src="Assets/icons/Alex.png" alt="Mentor" class="rounded-circle me-3"
-                                            width="20" height="20">
-                                      JavaScript
+                                        <img src="icons/Postgre.svg" alt="Mentor" class=" me-3"
+                                            width="30" height="30">
+                                            <div class="mt-1">PostgreSQL</div>
                                         <div class="trashicon col-1 ms-auto d-flex me-5">
                                             <button class="btn btn-sm me-2"><i class="bi bi-trash3"></i></button>
                                             <button class="btn  btn-sm"><i class="bi bi-pencil"></i></button>
@@ -482,15 +532,15 @@
                         </div>
                     </div>
                 <div class="row">
-                    <div class="border p-3 rounded mt-3 ms-2">
+                    <div class=" p-3  mt-3 ms-2">
                         <div id="skills-list">
                             <div class="row align-items-center mb-2">
                                 <div class="col-sm-12 col-md-12 col-lg-3  ">
                                     <div class="d-flex border border-radius-10 p-2">
                                         <input type="checkbox" class=" me-3">
-                                        <img src="Assets/icons/Alex.png" alt="Mentor" class="rounded-circle me-3"
-                                            width="20" height="20">
-                                        David Lee
+                                        <img src="icons/Oracle.png" alt="Mentor" class=" me-3"
+                                            width="30" height="30">
+                                            <div class="mt-1">Oracle SQL</div>
                                         <div class="trashicon col-1 ms-auto d-flex me-5">
                                             <button class="btn btn-sm me-2"><i class="bi bi-trash3"></i></button>
                                             <button class="btn  btn-sm"><i class="bi bi-pencil"></i></button>
@@ -500,9 +550,9 @@
                                 <div class="col-sm-12 col-md-12 col-lg-3">
                                     <div class="d-flex border border-radius-10 p-2"">
                                         <input type="checkbox" class=" me-3">
-                                        <img src="Assets/icons/Alex.png" alt="Mentor" class="rounded-circle me-3"
-                                            width="20" height="20">
-                                        David Lee
+                                        <img src="icons/Docker.png" alt="Mentor" class="me-3"
+                                            width="30" height="30">
+                                            <div class="mt-1">Docker</div>
                                         <div class="trashicon col-1 ms-auto d-flex me-5">
                                             <button class="btn btn-sm me-2"><i class="bi bi-trash3"></i></button>
                                             <button class="btn  btn-sm"><i class="bi bi-pencil"></i></button>
@@ -512,9 +562,9 @@
                                 <div class="col-sm-12 col-md-12 col-lg-3">
                                     <div class="d-flex border border-radius-10 p-2"">
                                         <input type="checkbox" class=" me-3">
-                                        <img src="Assets/icons/Alex.png" alt="Mentor" class="rounded-circle me-3"
-                                            width="20" height="20">
-                                        David Lee
+                                        <img src="icons/Kubernets.png" alt="Mentor" class=" me-3"
+                                            width="30" height="30">
+                                            <div class="mt-1">Kubernetes</div>
                                         <div class="trashicon col-1 ms-auto d-flex me-5">
                                             <button class="btn btn-sm me-2"><i class="bi bi-trash3"></i></button>
                                             <button class="btn  btn-sm"><i class="bi bi-pencil"></i></button>
@@ -524,9 +574,9 @@
                                 <div class="col-sm-12 col-md-12 col-lg-3">
                                     <div class="d-flex border border-radius-10 p-2"">
                                         <input type="checkbox" class=" me-3">
-                                        <img src="Assets/icons/Alex.png" alt="Mentor" class="rounded-circle me-3"
-                                            width="20" height="20">
-                                        David Lee
+                                        <img src="icons/Jira.svg" Mentor" class="me-3"
+                                            width="30" height="30">
+                                            <div class="mt-1">Jira</div>
                                         <div class="trashicon col-1 ms-auto d-flex me-5">
                                             <button class="btn btn-sm me-2"><i class="bi bi-trash3"></i></button>
                                             <button class="btn  btn-sm"><i class="bi bi-pencil"></i></button>
@@ -540,15 +590,15 @@
                         </div>
                     </div>
                 <div class="row">
-                    <div class="border p-3 rounded mt-3 ms-2">
+                    <div class=" p-3  mt-3 ms-2">
                         <div id="skills-list">
                             <div class="row align-items-center mb-2">
                                 <div class="col-sm-12 col-md-12 col-lg-3  ">
                                     <div class="d-flex border border-radius-10 p-2">
                                         <input type="checkbox" class=" me-3">
-                                        <img src="Assets/icons/Alex.png" alt="Mentor" class="rounded-circle me-3"
-                                            width="20" height="20">
-                                        David Lee
+                                        <img src="icons/API.png" alt="Mentor" class=" me-3"
+                                            width="30" height="30">
+                                            <div class="mt-1">Api Testing</div>
                                         <div class="trashicon col-1 ms-auto d-flex me-5">
                                             <button class="btn btn-sm me-2"><i class="bi bi-trash3"></i></button>
                                             <button class="btn  btn-sm"><i class="bi bi-pencil"></i></button>
@@ -558,9 +608,9 @@
                                 <div class="col-sm-12 col-md-12 col-lg-3">
                                     <div class="d-flex border border-radius-10 p-2"">
                                         <input type="checkbox" class=" me-3">
-                                        <img src="Assets/icons/Alex.png" alt="Mentor" class="rounded-circle me-3"
-                                            width="20" height="20">
-                                        David Lee
+                                        <img src="icons/Dprograming.png" alt="Mentor" class=" me-3"
+                                            width="30" height="30">
+                                              DataBase Programing
                                         <div class="trashicon col-1 ms-auto d-flex me-5">
                                             <button class="btn btn-sm me-2"><i class="bi bi-trash3"></i></button>
                                             <button class="btn  btn-sm"><i class="bi bi-pencil"></i></button>
@@ -570,9 +620,9 @@
                                 <div class="col-sm-12 col-md-12 col-lg-3">
                                     <div class="d-flex border border-radius-10 p-2"">
                                         <input type="checkbox" class=" me-3">
-                                        <img src="Assets/icons/Alex.png" alt="Mentor" class="rounded-circle me-3"
-                                            width="20" height="20">
-                                        David Lee
+                                        <img src="icons/cYPRESS.png" alt="Mentor" class="me-3"
+                                            width="30" height="30">
+                                            <div class="mt-1">Cypress.io</div>
                                         <div class="trashicon col-1 ms-auto d-flex me-5">
                                             <button class="btn btn-sm me-2"><i class="bi bi-trash3"></i></button>
                                             <button class="btn  btn-sm"><i class="bi bi-pencil"></i></button>
@@ -582,9 +632,9 @@
                                 <div class="col-sm-12 col-md-12 col-lg-3">
                                     <div class="d-flex border border-radius-10 p-2"">
                                         <input type="checkbox" class=" me-3">
-                                        <img src="Assets/icons/Alex.png" alt="Mentor" class="rounded-circle me-3"
-                                            width="20" height="20">
-                                        David Lee
+                                        <img src="icons/Automation.png" alt="Mentor" class=" me-3"
+                                            width="30" height="30">
+                                            <div class="mt-1">Automation Testing</div>
                                         <div class="trashicon col-1 ms-auto d-flex me-5">
                                             <button class="btn btn-sm me-2"><i class="bi bi-trash3"></i></button>
                                             <button class="btn  btn-sm"><i class="bi bi-pencil"></i></button>
@@ -598,15 +648,15 @@
                         </div>
                     </div>
                 <div class="row">
-                    <div class="border p-3 rounded mt-3 ms-2">
+                    <div class=" p-3  mt-3 ms-2">
                         <div id="skills-list">
                             <div class="row align-items-center mb-2">
                                 <div class="col-sm-12 col-md-12 col-lg-3  ">
                                     <div class="d-flex border border-radius-10 p-2">
                                         <input type="checkbox" class=" me-3">
-                                        <img src="Assets/icons/Alex.png" alt="Mentor" class="rounded-circle me-3"
-                                            width="20" height="20">
-                                        David Lee
+                                        <img src="icons/gitHub.svg" alt="Mentor" class="me-3"
+                                            width="30" height="30">
+                                            <div class="mt-1">GitHub</div>
                                         <div class="trashicon col-1 ms-auto d-flex me-5">
                                             <button class="btn btn-sm me-2"><i class="bi bi-trash3"></i></button>
                                             <button class="btn  btn-sm"><i class="bi bi-pencil"></i></button>
@@ -616,9 +666,9 @@
                                 <div class="col-sm-12 col-md-12 col-lg-3">
                                     <div class="d-flex border border-radius-10 p-2"">
                                         <input type="checkbox" class=" me-3">
-                                        <img src="Assets/icons/Alex.png" alt="Mentor" class="rounded-circle me-3"
-                                            width="20" height="20">
-                                        David Lee
+                                        <img src="icons/confluence.svg" alt="Mentor" class="me-3"
+                                            width="30" height="30">
+                                            <div class="mt-1">Confluence</div>
                                         <div class="trashicon col-1 ms-auto d-flex me-5">
                                             <button class="btn btn-sm me-2"><i class="bi bi-trash3"></i></button>
                                             <button class="btn  btn-sm"><i class="bi bi-pencil"></i></button>
@@ -628,9 +678,9 @@
                                 <div class="col-sm-12 col-md-12 col-lg-3">
                                     <div class="d-flex border border-radius-10 p-2"">
                                         <input type="checkbox" class=" me-3">
-                                        <img src="Assets/icons/Alex.png" alt="Mentor" class="rounded-circle me-3"
-                                            width="20" height="20">
-                                        David Lee
+                                        <img src="icons/Devops.svg" alt="Mentor" class=" me-3"
+                                            width="30" height="30">
+                                            <div class="mt-1">DevOps</div>
                                         <div class="trashicon col-1 ms-auto d-flex me-5">
                                             <button class="btn btn-sm me-2"><i class="bi bi-trash3"></i></button>
                                             <button class="btn  btn-sm"><i class="bi bi-pencil"></i></button>
@@ -640,9 +690,9 @@
                                 <div class="col-sm-12 col-md-12 col-lg-3">
                                     <div class="d-flex border border-radius-10 p-2"">
                                         <input type="checkbox" class=" me-3">
-                                        <img src="Assets/icons/Alex.png" alt="Mentor" class="rounded-circle me-3"
-                                            width="20" height="20">
-                                        David Lee
+                                        <img src="icons/jenkins.svg" alt="Mentor" class=" me-3"
+                                            width="30" height="30">
+                                            <div class="mt-1">Jenkins</div>
                                         <div class="trashicon col-1 ms-auto d-flex me-5">
                                             <button class="btn btn-sm me-2"><i class="bi bi-trash3"></i></button>
                                             <button class="btn  btn-sm"><i class="bi bi-pencil"></i></button>
@@ -655,65 +705,39 @@
                             </div>
                         </div>
                     </div>
-                <div class="row">
-                    <div class="border p-3 rounded mt-3 ms-2">
-                        <div id="skills-list">
-                            <div class="row align-items-center mb-2">
-                                <div class="col-sm-12 col-md-12 col-lg-3  ">
-                                    <div class="d-flex border border-radius-10 p-2">
-                                        <input type="checkbox" class=" me-3">
-                                        <img src="Assets/icons/Alex.png" alt="Mentor" class="rounded-circle me-3"
-                                            width="20" height="20">
-                                        David Lee
-                                        <div class="trashicon col-1 ms-auto d-flex me-5">
-                                            <button class="btn btn-sm me-2"><i class="bi bi-trash3"></i></button>
-                                            <button class="btn  btn-sm"><i class="bi bi-pencil"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 col-md-12 col-lg-3">
-                                    <div class="d-flex border border-radius-10 p-2"">
-                                        <input type="checkbox" class=" me-3">
-                                        <img src="Assets/icons/Alex.png" alt="Mentor" class="rounded-circle me-3"
-                                            width="20" height="20">
-                                        David Lee
-                                        <div class="trashicon col-1 ms-auto d-flex me-5">
-                                            <button class="btn btn-sm me-2"><i class="bi bi-trash3"></i></button>
-                                            <button class="btn  btn-sm"><i class="bi bi-pencil"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 col-md-12 col-lg-3">
-                                    <div class="d-flex border border-radius-10 p-2"">
-                                        <input type="checkbox" class=" me-3">
-                                        <img src="Assets/icons/Alex.png" alt="Mentor" class="rounded-circle me-3"
-                                            width="20" height="20">
-                                        David Lee
-                                        <div class="trashicon col-1 ms-auto d-flex me-5">
-                                            <button class="btn btn-sm me-2"><i class="bi bi-trash3"></i></button>
-                                            <button class="btn  btn-sm"><i class="bi bi-pencil"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 col-md-12 col-lg-3">
-                                    <div class="d-flex border border-radius-10 p-2"">
-                                        <input type="checkbox" class=" me-3">
-                                        <img src="Assets/icons/Alex.png" alt="Mentor" class="rounded-circle me-3"
-                                            width="20" height="20">
-                                        David Lee
-                                        <div class="trashicon col-1 ms-auto d-flex me-5">
-                                            <button class="btn btn-sm me-2"><i class="bi bi-trash3"></i></button>
-                                            <button class="btn  btn-sm"><i class="bi bi-pencil"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                           
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div>            
+               <!-- pagination -->
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-end me-2">
+                        <li class="page-item disabled">
+                            <a class="page-link bg-transparent rounded-pill text-primary shadow-sm" href="#"
+                                tabindex="-1" aria-disabled="true">
+                                &laquo;
+                            </a>
+                        </li>
+                        <li class="page-item active">
+                            <a class="page-link rounded-pill border-0 bg-primary text-white shadow-sm "
+                                href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link rounded-pill border-0 text-primary shadow-sm EM" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link rounded-pill border-0 text-primary shadow-sm" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link rounded-pill border-0 text-primary shadow-sm" href="#">....</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link rounded-pill border-0 text-primary shadow-sm" href="#">90</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link bg-transparent rounded-pill text-primary shadow-sm" href="#">
+                                &raquo;
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>

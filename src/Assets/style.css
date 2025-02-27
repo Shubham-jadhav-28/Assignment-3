@@ -12,9 +12,9 @@ body {
 .trashicon i:hover {
   transform: scale(1.2);
   color: white;
-  background-color: #f44336;
-  border-radius: 5px;
-  padding: 5%;
+  background-color: blue;
+  border-radius: 1px;
+  padding: 10%;
 }
 
 .trash i {
@@ -80,7 +80,6 @@ body {
 
 .overlay {
   display: none;
-  /* position: fixed; */
   top: 0;
   left: 0;
   width: 100%;
@@ -112,91 +111,5 @@ body {
     width: 100%;
     background-color: white;
     z-index: 1000;
-  }
-}
-
-.profile {
-  position: relative;
-  width: 150px;
-  height: 150px;
-}
-
-.profile-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease-in-out;
-}
-
-.profile:hover .profile-img {
-  opacity: 1;
-}
-
-.camera-icon {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  font-size: 20px;
-  background: #f8f5f5;
-  color: black;
-  border-radius: 50%;
-  padding: 5px;
-  opacity: 1;
-}
-
-.profile-name {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.profile:hover .profile-name {
-  opacity: 1;
-}
-
-.text-muted {
-  font-size: 0.9rem;
-}
-
-.skill-badge {
-  background-color: #f3e8ff;
-  color: #7b3fd4;
-  padding: 3px 8px;
-  border-radius: 5px;
-  font-size: 12px;
-  margin-right: 5px;
-}
-
-.number {
-  border-radius: 14px;
-  padding: 2px;
-}
-
-.number:hover {
-  background-color: blueviolet;
-  color: white;
-}
-
-/* Custom styling for responsiveness */
-#editor-container {
-  height: 300px;
-  width: 100%;
-}
-
-/* Adjust editor height on small screens */
-@media (max-width: 768px) {
-  #editor-container {
-    height: 200px;
   }
 }
